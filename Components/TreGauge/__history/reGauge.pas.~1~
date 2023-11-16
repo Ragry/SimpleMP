@@ -1,0 +1,21 @@
+unit reGauge;
+
+interface
+
+uses
+  Vcl.Samples.Gauges;
+
+type
+  TreGauge = class(TGauge)
+  published
+    property OnMouseDown;
+    property OnMouseEnter;
+    property OnMouseLeave;
+    property OnMouseMove;
+    property OnMouseUp;
+    property OnMouseWheel;
+    property OnMouseWheelDown;
+    property OnMouseWheelUp;
+  end;
+
+end.

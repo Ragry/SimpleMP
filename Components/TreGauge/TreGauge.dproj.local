@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.395,=E:\My Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.522,E:\My Documents\Embarcadero\Studio\Projects\Package1.dproj=C:\Users\Admin\Desktop\SimpleMP\Components\TreGauge\TreGauge.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.492,E:\My Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Admin\Desktop\SimpleMP\Components\TreGauge\reGauge.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.540,=rtl.dcp</Transaction>
+    <Transaction>2023.11.10 11:22:55.411,=vcl.dcp</Transaction>
+    <Transaction>2023.11.10 11:22:55.423,=VclSmp.dcp</Transaction>
+  </Transactions>
+</BorlandProject>

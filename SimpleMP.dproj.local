@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.253,=C:\Users\Admin\Desktop\SimpleMP\Id3v2Frames.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.051,=C:\Users\Admin\Desktop\SimpleMP\Id3Basics.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.945,C:\Users\Admin\Desktop\SimpleMP\Id3Basics.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.675,C:\Users\Admin\Desktop\SimpleMP\AudioFiles.Base.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.318,=C:\Users\Admin\Desktop\SimpleMP\U_CharCode.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.145,=C:\Users\Admin\Desktop\SimpleMP\ID3v2Tags.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.424,=C:\Users\Admin\Desktop\SimpleMP\ID3GenreList.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.084,=C:\Users\Admin\Desktop\SimpleMP\Components\TreGauge\reGauge.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.220,=C:\Users\Admin\Desktop\SimpleMP\AudioFiles.Base.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.287,=C:\Users\Admin\Desktop\SimpleMP\AudioFiles.Factory.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.342,C:\Users\Admin\Desktop\SimpleMP\AudioFiles.Factory.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.256,=C:\Users\Admin\Desktop\SimpleMP\AudioFiles.Declarations.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.107,=C:\Users\Admin\Desktop\SimpleMP\ID3v1Tags.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.295,C:\Users\Admin\Desktop\SimpleMP\Mp3Files.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.976,=C:\Users\Admin\Desktop\SimpleMP\Mp3Files.pas</Transaction>
+    <Transaction>2023.11.13 15:19:46.555,=C:\Users\Admin\Desktop\SimpleMP\Unit1.pas</Transaction>
+    <Transaction>2023.11.13 15:20:12.395,C:\Users\Admin\Desktop\SimpleMP\uPlayer.pas=C:\Users\Admin\Desktop\SimpleMP\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,12 @@
+unit uPlayer;
+
+interface
+
+type
+  TPlayer = class
+
+  end;
+
+implementation
+
+end.

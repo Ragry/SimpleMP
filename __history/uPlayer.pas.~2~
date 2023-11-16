@@ -1,0 +1,39 @@
+unit uPlayer;
+
+interface
+
+uses
+  System.Classes;
+
+type
+  TPlayer = class
+  private
+    FChannel: Cardinal;
+    FPlay: Boolean;
+    FOnStartPlaying: TNotifyEvent;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    property OnStartPlaying: TNotifyEvent read FOnStartPlaying write FOnStartPlaying;
+  end;
+
+implementation
+
+uses
+  bass;
+
+{ TPlayer }
+
+constructor TPlayer.Create;
+begin
+
+end;
+
+destructor TPlayer.Destroy;
+begin
+  if FChannel > 0 then BASS_ChannelFree(FChannel);
+	BASS_Free();
+  inherited;
+end;
+
+end.

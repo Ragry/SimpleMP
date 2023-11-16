@@ -1,0 +1,18 @@
+program SimpleMP;
+
+uses
+  Vcl.Forms,
+  fPlayer in 'fPlayer.pas' {frmPlayer},
+  Vcl.Themes,
+  Vcl.Styles,
+  bass in 'bass.pas',
+  QProgBar in 'Components\TQProgressBar\QProgBar.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPlayer, frmPlayer);
+  Application.Run;
+end.

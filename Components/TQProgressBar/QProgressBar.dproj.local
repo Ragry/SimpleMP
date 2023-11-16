@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023.11.07 10:39:12.321,=rtl.dcp</Transaction>
+    <Transaction>2023.11.07 10:39:40.550,C:\Users\Admin\Desktop\SimpleMP\Components\TQProgressBar\QProgressBar.dproj=E:\My Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2023.11.07 10:40:02.005,=C:\Users\Admin\Desktop\SimpleMP\Components\TQProgressBar\QProgBar.pas</Transaction>
+    <Transaction>2023.11.07 10:41:24.576,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>
