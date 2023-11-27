@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.Buttons, Vcl.Imaging.pngimage,
-  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.AppEvnts, Jpeg, Vcl.Samples.Gauges, reGauge, uPlayer;
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.AppEvnts, Jpeg, Vcl.Samples.Gauges, reGauge, uPlayer, fPlaylist, System.ImageList,
+  Vcl.ImgList;
 
 type
   TfrmPlayer = class(TForm)
@@ -15,22 +16,19 @@ type
     btnPlay: TSpeedButton;
     btnPause: TSpeedButton;
     btnNext: TSpeedButton;
-    Edit1: TEdit;
     lblTimeCode: TLabel;
     lblTimeMax: TLabel;
     tiTrayIcon: TTrayIcon;
     aeApplicationEvents: TApplicationEvents;
     tmrRefresh: TTimer;
-    Label1: TLabel;
-    Label2: TLabel;
     btnMinimize: TSpeedButton;
-    SpeedButton2: TSpeedButton;
     btnClose: TSpeedButton;
-    Shape1: TShape;
-    btnGetMp3Info: TButton;
-    Image2: TImage;
     gageFilePosition: TreGauge;
     gageVolume: TreGauge;
+    ilstButtons: TImageList;
+    lblSongFile: TLabel;
+    btnGetMp3Info: TSpeedButton;
+    Image2: TImage;
     procedure btnPlayClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -44,6 +42,9 @@ type
     procedure btnGetMp3InfoClick(Sender: TObject);
     procedure gageFilePositionMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure gageVolumeMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+    procedure FormShow(Sender: TObject);
+    procedure FormMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+    procedure FormPaint(Sender: TObject);
   private
     FPlayer: TPlayer;
     procedure UpdateTimeCode;
@@ -64,7 +65,7 @@ procedure TfrmPlayer.btnPlayClick(Sender: TObject);
 var
   Time: Cardinal;
 begin
-  FPlayer.Play(Edit1.Text, gageFilePosition.Progress);
+  FPlayer.Play(lblSongFile.Caption, gageFilePosition.Progress);
   gageFilePosition.MaxValue := FPlayer.ByteLength;
   FPlayer.Volume := gageVolume.Progress / 100;
   Time := FPlayer.Duration;
@@ -80,6 +81,28 @@ end;
 procedure TfrmPlayer.FormCreate(Sender: TObject);
 begin
   FPlayer := TPlayer.Create(Handle);
+end;
+
+procedure TfrmPlayer.FormMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+const
+  SC_DRAGMOVE = $F012;
+begin
+  if Button = mbLeft then
+  begin
+    ReleaseCapture;
+    Perform(WM_SYSCOMMAND, SC_DRAGMOVE, 0);
+  end;
+end;
+
+procedure TfrmPlayer.FormPaint(Sender: TObject);
+begin
+  Canvas.Pen.Color := RGB(252, 221, 9);
+  Canvas.Rectangle(0, 0, Width, Height);
+end;
+
+procedure TfrmPlayer.FormShow(Sender: TObject);
+begin
+//  frmPlaylist.Show;
 end;
 
 procedure TfrmPlayer.gageFilePositionMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
@@ -133,7 +156,7 @@ begin
   id3v2 := TID3v2Tag.Create;
   stream := TMemoryStream.Create;
   try
-    id3v2.ReadFromFile(Edit1.Text);
+    id3v2.ReadFromFile(lblSongFile.Caption);
     if id3v2.TagExists then
 //      ShowMessage(id3v2.Artist + ' - ' + id3v2.Title);
 //      ShowMessage(id3v2.Album);
@@ -142,7 +165,7 @@ begin
       stream.Seek(0, soFromBeginning);
       JpegImage := TJpegImage.Create;
       JpegImage.LoadFromStream(stream);
-      Image2.Picture.Assign(JpegImage);
+//      Image2.Picture.Assign(JpegImage);
   finally
     id3v2.Free;
     stream.Free;

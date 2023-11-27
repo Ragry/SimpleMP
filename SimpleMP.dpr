@@ -14,7 +14,9 @@ uses
   ID3GenreList in 'ID3GenreList.pas',
   Id3v2Frames in 'Id3v2Frames.pas',
   reGauge in 'Components\TreGauge\reGauge.pas',
-  uPlayer in 'uPlayer.pas';
+  uPlayer in 'uPlayer.pas',
+  fPlaylist in 'fPlaylist.pas' {frmPlaylist},
+  rePngSpeedButton in 'Components\TrePngSpeedButton\rePngSpeedButton.pas';
 
 {$R *.res}
 
@@ -22,5 +24,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPlayer, frmPlayer);
+  Application.CreateForm(TfrmPlaylist, frmPlaylist);
   Application.Run;
 end.

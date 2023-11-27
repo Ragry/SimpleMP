@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023.11.24 14:43:32.153,=rtl.dcp</Transaction>
+    <Transaction>2023.11.24 14:44:02.031,C:\Users\Admin\Desktop\SimpleMP\Components\TrePngSpeedButton\TrePngSpeedButton.dproj=E:\My Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2023.11.24 14:44:31.964,=C:\Users\Admin\Desktop\SimpleMP\Components\TrePngSpeedButton\Unit1.pas</Transaction>
+    <Transaction>2023.11.24 14:44:53.789,C:\Users\Admin\Desktop\SimpleMP\Components\TrePngSpeedButton\rePngSpeedButton.pas=C:\Users\Admin\Desktop\SimpleMP\Components\TrePngSpeedButton\Unit1.pas</Transaction>
+    <Transaction>2023.11.24 14:46:13.803,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>

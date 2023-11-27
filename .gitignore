@@ -1,1 +1,8 @@
 *.mp3
+SimpleMP.exe
+*.dcu
+/Components/TQProgressBar/__history
+/Components/TreGauge/__history
+/Components/TrePngSpeedButton/__history
+__history
+/Components/TQProgressBar/*.dcu
