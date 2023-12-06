@@ -28,7 +28,6 @@ type
     ilstButtons: TImageList;
     lblSongFile: TLabel;
     btnGetMp3Info: TSpeedButton;
-    Image2: TImage;
     procedure btnPlayClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
